@@ -1,23 +1,21 @@
 {
-  "name": "nodejs_hoidanit",
+  "name": "nasa_20110352",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "NASA_NGUYENVIETANH_20110352",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node index.js"
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "watch": "npm run server & npm run client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
-    "body-parser": "^1.19.0",
-    "dotenv": "^16.3.1",
-    "ejs": "3.1.6",
-    "express": "4.17.1",
-    "mysql2": "2.3.0",
-    "nodemon": "^2.0.12"
+    "client": "^0.0.1"
   }
 }
